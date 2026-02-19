@@ -1,6 +1,6 @@
-# Rust-Playgroung
+# Rust-Playground
 1. A Marco Polo game
-2. A actix_web based simple float calculator
+2. An actix_web simple float calculator
 
 ## Install Rust 
 
