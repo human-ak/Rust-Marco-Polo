@@ -1,3 +1,5 @@
+[![Codespaces Prebuilds](https://github.com/human-ak/Rust-Marco-Polo/actions/workflows/codespaces/create_codespaces_prebuilds/badge.svg)](https://github.com/human-ak/Rust-Marco-Polo/actions/workflows/codespaces/create_codespaces_prebuilds)
+
 # Rust-Playground
 1. A Marco Polo game
 2. An actix_web simple float calculator
