@@ -10,11 +10,11 @@ format:
 	cargo fmt --quiet
 
 lint:
-	cargo clippy --quiet
+	cargo clippy
 
 test:
-	cargo test --quiet
-
+	cargo test
+	
 run:
 	cargo run
 

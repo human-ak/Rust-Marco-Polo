@@ -1,21 +1,21 @@
-// build calculator funtions
+// build calculator functions
 
-//add two numbers
+// add two numbers
 pub fn add(a: f64, b: f64) -> f64 {
     a + b
 }
 
-//subtract two numbers
+// subtract two numbers
 pub fn subtract(a: f64, b: f64) -> f64 {
     a - b
 }
 
-//multiply two numbers
+// multiply two numbers
 pub fn multiply(a: f64, b: f64) -> f64 {
     a * b
 }
 
-//divide two numbers
+// divide two numbers
 pub fn divide(a: f64, b: f64) -> f64 {
     a / b
 }
