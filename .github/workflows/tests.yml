@@ -12,12 +12,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          toolchain: stable
-          profile: minimal
-          components: clippy, rustfmt
-          override: true
+        run: |
+          curl https://sh.rustup.rs -sSf | sh -s -- -y
+          source $HOME/.cargo/env
+          rustup toolchain install stable
+          rustup default stable
+          rustup component add clippy rustfmt || true
 
       - name: Cache cargo registry and target
         uses: actions/cache@v4

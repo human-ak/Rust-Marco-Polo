@@ -22,12 +22,12 @@ jobs:
             ${{ runner.os }}-cargo-
 
       - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          toolchain: stable
-          profile: minimal
-          components: rustfmt
-          override: true
+        run: |
+          curl https://sh.rustup.rs -sSf | sh -s -- -y
+          source $HOME/.cargo/env
+          rustup toolchain install stable
+          rustup default stable
+          rustup component add rustfmt || true
 
       - name: Build (release)
         run: cargo build --release --locked
