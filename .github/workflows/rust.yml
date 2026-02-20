@@ -23,7 +23,7 @@ jobs:
           path: |
             ~/.cargo/registry
             ~/.cargo/git
-            target
+            marco/target
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: |
             ${{ runner.os }}-cargo-
@@ -38,6 +38,8 @@ jobs:
 
       - name: Build
         run: cargo build --verbose
+        working-directory: marco
 
       - name: Run tests
         run: cargo test --verbose
+        working-directory: marco

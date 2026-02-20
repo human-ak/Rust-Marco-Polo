@@ -16,7 +16,7 @@ jobs:
           path: |
             ~/.cargo/registry
             ~/.cargo/git
-            target
+            marco/target
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: |
             ${{ runner.os }}-cargo-
@@ -31,9 +31,10 @@ jobs:
 
       - name: Build (release)
         run: cargo build --release --locked
+        working-directory: marco
 
       - name: Upload release artifact
         uses: actions/upload-artifact@v4
         with:
           name: release-binary
-          path: target/release/*
+          path: marco/target/release/*
